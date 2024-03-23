@@ -1,0 +1,6 @@
+2024-03-23T21:35:15.039+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-23T21:35:15.283+0700	ERROR	logger/logger.go:64	Error during saing file 	{"error": "open cache/4725412.html: The system cannot find the path specified."}
+2024-03-23T21:35:15.310+0700	INFO	logger/logger.go:59	Finished 
+2024-03-23T21:35:49.176+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-23T21:35:49.349+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-23T21:35:49.363+0700	INFO	logger/logger.go:59	Finished 
