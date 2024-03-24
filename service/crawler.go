@@ -42,6 +42,10 @@ func (c Crawler) Visit(url string) {
 			para = append(para, kl.Text)
 		})
 		fmt.Print(para)
+		log.Info("Processing statictis text")
+		Concurrency(para)
+		log.Info("Done")
+
 	})
 
 	c.C.OnScraped((func(r *colly.Response) {
