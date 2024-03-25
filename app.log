@@ -9,3 +9,27 @@
 2024-03-24T08:48:20.815+0700	INFO	logger/logger.go:59	Processing statictis text
 2024-03-24T08:48:20.819+0700	INFO	logger/logger.go:59	Done
 2024-03-24T08:48:20.820+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T00:58:28.883+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T00:58:29.024+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T00:58:29.028+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T00:58:29.030+0700	INFO	logger/logger.go:59	Write successfully into 4725412.html.json
+2024-03-26T00:58:29.031+0700	INFO	logger/logger.go:59	Done
+2024-03-26T00:58:29.031+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T01:00:40.996+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T01:00:41.128+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T01:00:41.133+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T01:00:41.134+0700	INFO	logger/logger.go:59	Write successfully into 4725412.html.json
+2024-03-26T01:00:41.135+0700	INFO	logger/logger.go:59	Done
+2024-03-26T01:00:41.135+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T01:02:13.499+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T01:02:13.632+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T01:02:13.636+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T01:02:13.639+0700	INFO	logger/logger.go:59	Write successfully into 4725412.html.json
+2024-03-26T01:02:13.640+0700	INFO	logger/logger.go:59	Done
+2024-03-26T01:02:13.640+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T01:02:54.940+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T01:02:55.077+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T01:02:55.098+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T01:02:55.101+0700	INFO	logger/logger.go:59	Write successfully into 4725412.html.json
+2024-03-26T01:02:55.101+0700	INFO	logger/logger.go:59	Done
+2024-03-26T01:02:55.101+0700	INFO	logger/logger.go:59	Finished 

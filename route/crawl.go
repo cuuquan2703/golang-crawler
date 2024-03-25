@@ -6,6 +6,7 @@ import (
 	"io"
 	"net/http"
 	"webcrawler/service"
+	"webcrawler/utils"
 
 	"github.com/gocolly/colly"
 )
@@ -15,18 +16,13 @@ var crawlService = service.Crawler{
 	C: a,
 }
 
-type Body struct {
-	Url string `json:"url"`
-}
-
 func CrawlData(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("entry")
 	body, _ := io.ReadAll(r.Body)
-	var b Body
+	var b utils.Body
 	er := json.Unmarshal([]byte(string(body)), &b)
 	if er != nil {
 		fmt.Print("a")
 	}
-	fmt.Println(b.Url)
-	crawlService.Visit(b.Url)
+	crawlService.Visit(b.Url, b.Options)
 }

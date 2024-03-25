@@ -3,6 +3,8 @@ package service
 import (
 	"regexp"
 	"strings"
+
+	"github.com/texttheater/golang-levenshtein/levenshtein"
 )
 
 func LineCount(content string, count chan int) {
@@ -35,7 +37,20 @@ func Freq(content string, freq chan map[string]int, totalLen chan int) {
 	totalLen <- length
 }
 
-func Worker(jobs chan string, lineCount chan int, wordCount chan int, charCount chan int, freq chan map[string]int, totalLen chan int) {
+func BoldText(content string, req string, boldText chan string) {
+	clone := content
+	threshold := 2
+	a := ""
+	w := strings.Fields(clone)
+	for _, j := range w {
+		if (levenshtein.DistanceForStrings([]rune(j), []rune(req), levenshtein.DefaultOptions)) <= threshold {
+			a = strings.Replace(clone, j, "*"+j+"*", -1)
+		}
+	}
+	boldText <- a
+}
+
+func Worker(jobs chan string, boldText string, newContent chan string, lineCount chan int, wordCount chan int, charCount chan int, freq chan map[string]int, totalLen chan int) {
 	//jobs -> para 10k
 	//
 	for j := range jobs {
@@ -43,5 +58,6 @@ func Worker(jobs chan string, lineCount chan int, wordCount chan int, charCount 
 		go WordCount(j, wordCount)
 		go CharCount(j, charCount)
 		go Freq(j, freq, totalLen)
+		go BoldText(j, boldText, newContent)
 	}
 }
