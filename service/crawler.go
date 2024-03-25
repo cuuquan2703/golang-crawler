@@ -2,15 +2,18 @@ package service
 
 import (
 	"fmt"
+	"strconv"
 	"strings"
 	"webcrawler/logger"
+	"webcrawler/repositories"
 	"webcrawler/utils"
 
 	"github.com/gocolly/colly"
 )
 
 type Crawler struct {
-	C *colly.Collector
+	C    *colly.Collector
+	Repo *repositories.ParaRepository
 }
 
 var log = logger.CreateLog()
@@ -24,6 +27,7 @@ func (c Crawler) Visit(url string, options utils.Option) {
 	c.C.OnRequest(func(r *colly.Request) {
 		path := strings.Split(r.URL.Path, "-")
 		html := path[len(path)-1]
+		r.Ctx.Put("url", r.URL.Path)
 		r.Ctx.Put("fileHTML", html)
 		log.Info("Visiting " + r.URL.Path)
 	})
@@ -62,8 +66,8 @@ func (c Crawler) Visit(url string, options utils.Option) {
 		})
 		fmt.Print(para)
 		log.Info("Processing statictis text")
-		// paras, lineCount, wourdCount, charCount, freq, avgCount := Concurrency(para, options.BoldText)
-		paras, _, _, _, _, _ := Concurrency(para, options.BoldText)
+		paras, lineCount, wourdCount, charCount, freq, avgCount := Concurrency(para, options.BoldText)
+		//paras, _, _, _, _, _ := Concurrency(para, options.BoldText)
 
 		var json = utils.JSONFile{
 			Title:      title,
@@ -73,7 +77,19 @@ func (c Crawler) Visit(url string, options utils.Option) {
 		}
 
 		Dump(json, e.Response.Ctx.Get("fileHTML")+".json")
+		id, _ := strconv.Atoi(strings.Split(e.Response.Ctx.Get("fileHTML"), ".")[0])
+		var data = repositories.Para{
+			Id:        id,
+			Url:       e.Response.Ctx.Get("url"),
+			Json:      e.Response.Ctx.Get("fileHTML") + ".json",
+			LineCount: lineCount,
+			WordCount: wourdCount,
+			CharCount: charCount,
+			AvgLength: avgCount,
+			WordFreq:  freq,
+		}
 
+		c.Repo.Insert(data)
 		log.Info("Done")
 
 	})

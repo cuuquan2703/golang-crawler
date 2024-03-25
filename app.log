@@ -33,3 +33,60 @@
 2024-03-26T01:02:55.101+0700	INFO	logger/logger.go:59	Write successfully into 4725412.html.json
 2024-03-26T01:02:55.101+0700	INFO	logger/logger.go:59	Done
 2024-03-26T01:02:55.101+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T03:28:27.886+0700	ERROR	logger/logger.go:64	Error open db:	{"error": "sql: unknown driver \"postgres\" (forgotten import?)"}
+2024-03-26T03:29:28.767+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T03:29:29.207+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T03:29:29.223+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T03:29:29.224+0700	INFO	logger/logger.go:59	Write successfully into 4725412.html.json
+2024-03-26T03:29:29.344+0700	ERROR	logger/logger.go:64	Error: 
+2024-03-26T03:29:29.345+0700	INFO	logger/logger.go:59	Done
+2024-03-26T03:29:29.345+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T03:31:18.221+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T03:31:18.634+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T03:31:18.636+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T03:31:18.639+0700	INFO	logger/logger.go:59	Write successfully into 4725412.html.json
+2024-03-26T03:31:18.677+0700	ERROR	logger/logger.go:64	Error: 
+2024-03-26T03:31:18.677+0700	INFO	logger/logger.go:59	Done
+2024-03-26T03:31:18.678+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T03:32:20.002+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T03:32:21.491+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T03:32:21.508+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T03:32:21.524+0700	INFO	logger/logger.go:59	Write successfully into 4725412.html.json
+2024-03-26T03:32:21.589+0700	ERROR	logger/logger.go:64	Error: 
+2024-03-26T03:32:21.590+0700	INFO	logger/logger.go:59	Done
+2024-03-26T03:32:21.590+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T03:32:51.147+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T03:32:52.225+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T03:32:52.232+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T03:32:52.238+0700	INFO	logger/logger.go:59	Write successfully into 4725412.html.json
+2024-03-26T03:32:52.324+0700	ERROR	logger/logger.go:64	Error: 
+2024-03-26T03:32:52.324+0700	INFO	logger/logger.go:59	Done
+2024-03-26T03:32:52.324+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T03:33:41.430+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T03:33:41.871+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T03:33:41.884+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T03:33:41.894+0700	INFO	logger/logger.go:59	Write successfully into 4725412.html.json
+2024-03-26T03:33:41.958+0700	ERROR	logger/logger.go:64	Error: 
+2024-03-26T03:33:41.958+0700	INFO	logger/logger.go:59	Done
+2024-03-26T03:33:41.958+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T04:23:06.114+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T04:23:06.584+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T04:23:06.587+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T04:23:06.591+0700	INFO	logger/logger.go:59	Write successfully into 4725412.html.json
+2024-03-26T04:23:06.666+0700	ERROR	logger/logger.go:64	Error: 
+2024-03-26T04:23:06.666+0700	INFO	logger/logger.go:59	Done
+2024-03-26T04:23:06.667+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T04:24:13.957+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T04:24:14.484+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T04:24:14.487+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T04:24:14.490+0700	INFO	logger/logger.go:59	Write successfully into 4725412.html.json
+2024-03-26T04:24:14.552+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: got 6 parameters but the statement requires 7"}
+2024-03-26T04:24:14.552+0700	INFO	logger/logger.go:59	Done
+2024-03-26T04:24:14.553+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T04:24:52.566+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T04:24:53.117+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T04:24:53.122+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T04:24:53.124+0700	INFO	logger/logger.go:59	Write successfully into 4725412.html.json
+2024-03-26T04:24:53.177+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-26T04:24:53.178+0700	INFO	logger/logger.go:59	Done
+2024-03-26T04:24:53.178+0700	INFO	logger/logger.go:59	Finished 

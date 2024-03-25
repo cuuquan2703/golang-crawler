@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"webcrawler/repositories"
 	"webcrawler/service"
 	"webcrawler/utils"
 
@@ -12,8 +13,10 @@ import (
 )
 
 var a = colly.NewCollector()
+var Repo, _ = repositories.NewParaRepository()
 var crawlService = service.Crawler{
-	C: a,
+	C:    a,
+	Repo: Repo,
 }
 
 func CrawlData(w http.ResponseWriter, r *http.Request) {
