@@ -300,3 +300,115 @@
 2024-03-26T11:20:30.893+0700	INFO	logger/logger.go:59	Insert successfully
 2024-03-26T11:20:30.893+0700	INFO	logger/logger.go:59	Done
 2024-03-26T11:20:30.894+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T11:54:19.503+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T11:54:20.076+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T11:54:20.089+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T11:54:20.095+0700	INFO	logger/logger.go:59	Write successfully into 4725412.json
+2024-03-26T11:54:20.483+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: duplicate key value violates unique constraint \"paragraphs_pkey\""}
+2024-03-26T11:54:20.483+0700	INFO	logger/logger.go:59	Done
+2024-03-26T11:54:20.483+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T11:54:20.483+0700	INFO	logger/logger.go:59	Visiting /ngan-hang-nha-nuoc-de-xuat-bo-doc-quyen-vang-mieng-4724716.html
+2024-03-26T11:54:20.749+0700	INFO	logger/logger.go:59	Saved file into cache/4724716.html
+2024-03-26T11:54:20.768+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T11:54:20.771+0700	INFO	logger/logger.go:59	Write successfully into 4724716.json
+2024-03-26T11:54:20.774+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: duplicate key value violates unique constraint \"paragraphs_pkey\""}
+2024-03-26T11:54:20.774+0700	INFO	logger/logger.go:59	Done
+2024-03-26T11:54:20.775+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T12:28:27.984+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T12:28:28.430+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T12:28:28.433+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T12:28:28.435+0700	INFO	logger/logger.go:59	Write successfully into 4725412.json
+2024-03-26T12:28:28.616+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: duplicate key value violates unique constraint \"paragraphs_pkey\""}
+2024-03-26T12:28:28.616+0700	INFO	logger/logger.go:59	Done
+2024-03-26T12:28:28.617+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T12:28:28.617+0700	INFO	logger/logger.go:59	Visiting /ngan-hang-nha-nuoc-de-xuat-bo-doc-quyen-vang-mieng-4724716.html
+2024-03-26T12:28:28.740+0700	INFO	logger/logger.go:59	Saved file into cache/4724716.html
+2024-03-26T12:28:28.752+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T12:28:28.754+0700	INFO	logger/logger.go:59	Write successfully into 4724716.json
+2024-03-26T12:28:28.758+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: duplicate key value violates unique constraint \"paragraphs_pkey\""}
+2024-03-26T12:28:28.759+0700	INFO	logger/logger.go:59	Done
+2024-03-26T12:28:28.759+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T12:30:30.351+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T12:30:30.818+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T12:30:30.821+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T12:30:30.830+0700	INFO	logger/logger.go:59	Write successfully into 4725412.json
+2024-03-26T12:30:31.015+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: duplicate key value violates unique constraint \"paragraphs_pkey\""}
+2024-03-26T12:30:31.015+0700	INFO	logger/logger.go:59	Done
+2024-03-26T12:30:31.015+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T12:30:31.015+0700	INFO	logger/logger.go:59	Visiting /ngan-hang-nha-nuoc-de-xuat-bo-doc-quyen-vang-mieng-4724716.html
+2024-03-26T12:30:31.974+0700	INFO	logger/logger.go:59	Saved file into cache/4724716.html
+2024-03-26T12:30:31.977+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T12:30:31.980+0700	INFO	logger/logger.go:59	Write successfully into 4724716.json
+2024-03-26T12:30:31.982+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: duplicate key value violates unique constraint \"paragraphs_pkey\""}
+2024-03-26T12:30:31.982+0700	INFO	logger/logger.go:59	Done
+2024-03-26T12:30:31.982+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T12:32:16.661+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T12:32:17.097+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T12:32:17.100+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T12:32:17.106+0700	INFO	logger/logger.go:59	Write successfully into 4725412.json
+2024-03-26T12:32:17.150+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: duplicate key value violates unique constraint \"paragraphs_pkey\""}
+2024-03-26T12:32:17.150+0700	INFO	logger/logger.go:59	Done
+2024-03-26T12:32:17.150+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T12:32:17.150+0700	INFO	logger/logger.go:59	Visiting /ngan-hang-nha-nuoc-de-xuat-bo-doc-quyen-vang-mieng-4724716.html
+2024-03-26T12:32:18.555+0700	INFO	logger/logger.go:59	Saved file into cache/4724716.html
+2024-03-26T12:32:18.563+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T12:32:18.574+0700	INFO	logger/logger.go:59	Write successfully into 4724716.json
+2024-03-26T12:32:18.580+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: duplicate key value violates unique constraint \"paragraphs_pkey\""}
+2024-03-26T12:32:18.580+0700	INFO	logger/logger.go:59	Done
+2024-03-26T12:32:18.581+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T12:33:31.847+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T12:33:32.349+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T12:33:32.352+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T12:33:32.362+0700	INFO	logger/logger.go:59	Write successfully into 4725412.json
+2024-03-26T12:33:32.509+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: duplicate key value violates unique constraint \"paragraphs_pkey\""}
+2024-03-26T12:33:32.509+0700	INFO	logger/logger.go:59	Done
+2024-03-26T12:33:32.510+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T12:33:32.510+0700	INFO	logger/logger.go:59	Visiting /ngan-hang-nha-nuoc-de-xuat-bo-doc-quyen-vang-mieng-4724716.html
+2024-03-26T12:33:32.705+0700	INFO	logger/logger.go:59	Saved file into cache/4724716.html
+2024-03-26T12:33:32.713+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T12:33:32.714+0700	INFO	logger/logger.go:59	Write successfully into 4724716.json
+2024-03-26T12:33:32.716+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: duplicate key value violates unique constraint \"paragraphs_pkey\""}
+2024-03-26T12:33:32.717+0700	INFO	logger/logger.go:59	Done
+2024-03-26T12:33:32.718+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T13:16:38.640+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T13:16:45.361+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T13:16:45.365+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T13:16:45.366+0700	INFO	logger/logger.go:59	Write successfully into 4725412.json
+2024-03-26T13:16:45.716+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: duplicate key value violates unique constraint \"paragraphs_pkey\""}
+2024-03-26T13:16:45.716+0700	INFO	logger/logger.go:59	Done
+2024-03-26T13:16:45.717+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T13:16:45.717+0700	INFO	logger/logger.go:59	Visiting /ngan-hang-nha-nuoc-de-xuat-bo-doc-quyen-vang-mieng-4724716.html
+2024-03-26T13:16:47.189+0700	INFO	logger/logger.go:59	Saved file into cache/4724716.html
+2024-03-26T13:16:47.191+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T13:16:47.196+0700	INFO	logger/logger.go:59	Write successfully into 4724716.json
+2024-03-26T13:16:47.256+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: duplicate key value violates unique constraint \"paragraphs_pkey\""}
+2024-03-26T13:16:47.256+0700	INFO	logger/logger.go:59	Done
+2024-03-26T13:16:47.257+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T13:47:11.519+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T13:47:12.176+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T13:47:12.179+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T13:47:12.181+0700	INFO	logger/logger.go:59	Write successfully into 4725412.json
+2024-03-26T13:47:12.284+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: duplicate key value violates unique constraint \"paragraphs_pkey\""}
+2024-03-26T13:47:12.284+0700	INFO	logger/logger.go:59	Done
+2024-03-26T13:47:12.285+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T13:47:12.285+0700	INFO	logger/logger.go:59	Visiting /ngan-hang-nha-nuoc-de-xuat-bo-doc-quyen-vang-mieng-4724716.html
+2024-03-26T13:47:12.668+0700	INFO	logger/logger.go:59	Saved file into cache/4724716.html
+2024-03-26T13:47:12.672+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T13:47:12.674+0700	INFO	logger/logger.go:59	Write successfully into 4724716.json
+2024-03-26T13:47:12.677+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: duplicate key value violates unique constraint \"paragraphs_pkey\""}
+2024-03-26T13:47:12.677+0700	INFO	logger/logger.go:59	Done
+2024-03-26T13:47:12.679+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T13:54:25.165+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-26T13:54:29.365+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-26T13:54:29.369+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T13:54:29.373+0700	INFO	logger/logger.go:59	Write successfully into 4725412.json
+2024-03-26T13:54:29.459+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: duplicate key value violates unique constraint \"paragraphs_pkey\""}
+2024-03-26T13:54:29.460+0700	INFO	logger/logger.go:59	Done
+2024-03-26T13:54:29.460+0700	INFO	logger/logger.go:59	Finished 
+2024-03-26T13:54:29.460+0700	INFO	logger/logger.go:59	Visiting /ngan-hang-nha-nuoc-de-xuat-bo-doc-quyen-vang-mieng-4724716.html
+2024-03-26T13:54:33.107+0700	INFO	logger/logger.go:59	Saved file into cache/4724716.html
+2024-03-26T13:54:33.111+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-26T13:54:33.114+0700	INFO	logger/logger.go:59	Write successfully into 4724716.json
+2024-03-26T13:54:33.147+0700	ERROR	logger/logger.go:64	Error: 	{"error": "pq: duplicate key value violates unique constraint \"paragraphs_pkey\""}
+2024-03-26T13:54:33.147+0700	INFO	logger/logger.go:59	Done
+2024-03-26T13:54:33.148+0700	INFO	logger/logger.go:59	Finished 

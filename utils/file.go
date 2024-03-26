@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"os"
@@ -15,6 +16,8 @@ type Data struct {
 
 func Dump(jsonData JSONFile, fileName string) {
 	data, err := json.MarshalIndent(jsonData, "", "  ")
+	data = bytes.ReplaceAll(data, []byte(`\u003c`), []byte(`<`))
+	data = bytes.ReplaceAll(data, []byte(`\u003e`), []byte(`>`))
 	if err != nil {
 		log.Error("Error in Matshal data ", err)
 		return

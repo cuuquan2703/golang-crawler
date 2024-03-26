@@ -31,7 +31,7 @@ func CrawlData(w http.ResponseWriter, r *http.Request) {
 	}
 	go crawlService.Visit(b.Url, b.Options, err)
 	_err := <-err
-	if err != nil {
+	if _err != nil {
 		response := &utils.Response{Status: "fail", Message: _err.Error()}
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode(response)

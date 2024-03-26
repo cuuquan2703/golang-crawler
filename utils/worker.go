@@ -42,9 +42,9 @@ func BoldText(content string, req string, boldText chan string) {
 	threshold := 2
 	a := ""
 	w := strings.Fields(clone)
-	for _, j := range w {
-		if (levenshtein.DistanceForStrings([]rune(j), []rune(req), levenshtein.DefaultOptions)) <= threshold {
-			a = strings.Replace(clone, j, "*"+j+"*", -1)
+	for _, word := range w {
+		if (levenshtein.DistanceForStrings([]rune(word), []rune(req), levenshtein.DefaultOptions)) <= threshold {
+			a = strings.Replace(clone, word, "<b>"+word+"</b>", -1)
 		}
 	}
 	boldText <- a

@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	http.HandleFunc("GET /up", route.CrawlData)
+	http.HandleFunc("POST /up", route.CrawlData)
 	http.HandleFunc("GET /download/{fileName}", route.Download)
 
 	http.ListenAndServe(":8080", nil)

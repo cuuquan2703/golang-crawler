@@ -20,6 +20,7 @@ type Crawler struct {
 var log = logger.CreateLog()
 
 func (c Crawler) Visit(url string, options utils.Option, err chan error) {
+	var er error
 	var para []string
 	var img []string
 	var relatedUrl []string
@@ -41,7 +42,7 @@ func (c Crawler) Visit(url string, options utils.Option, err chan error) {
 	})
 
 	c.C.OnError(func(_ *colly.Response, _err error) {
-		err <- _err
+		er = _err
 		log.Error("Error: ", _err)
 	})
 
@@ -49,6 +50,7 @@ func (c Crawler) Visit(url string, options utils.Option, err chan error) {
 		filePath := "cache/" + r.Ctx.Get("fileHTML")
 		err := r.Save(filePath)
 		if err != nil {
+			er = err
 			log.Error("Error during saing file ", err)
 		} else {
 			log.Info("Saved file into " + filePath)
@@ -58,8 +60,8 @@ func (c Crawler) Visit(url string, options utils.Option, err chan error) {
 	c.C.OnHTML(".title-detail", func(e *colly.HTMLElement) {
 		fmt.Println(e.Name)
 		if e.Name == options.Tag {
-			open := `\<` + e.Name + `\>`
-			close := `\<\/` + e.Name + `\>`
+			open := `<` + e.Name + `>`
+			close := `</` + e.Name + `>`
 			title = open + e.Text + close
 		}
 	})
@@ -92,8 +94,9 @@ func (c Crawler) Visit(url string, options utils.Option, err chan error) {
 			RelatedUrl: relatedUrl,
 		}
 
-		utils.Dump(json, e.Response.Ctx.Get("fileHTML")+".json")
-		id, _ := strconv.Atoi(strings.Split(e.Response.Ctx.Get("fileHTML"), ".")[0])
+		utils.Dump(json, strings.Split(e.Response.Ctx.Get("fileHTML"), ".")[0]+".json")
+		id, err := strconv.Atoi(strings.Split(e.Response.Ctx.Get("fileHTML"), ".")[0])
+		er = err
 		var data = repositories.Para{
 			Id:        id,
 			Url:       e.Response.Ctx.Get("url"),
@@ -122,5 +125,5 @@ func (c Crawler) Visit(url string, options utils.Option, err chan error) {
 
 	c.C.Visit(url)
 	c.C.Wait()
-
+	err <- er
 }
