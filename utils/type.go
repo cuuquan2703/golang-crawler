@@ -17,3 +17,8 @@ type Body struct {
 	Url     string `json:"url"`
 	Options Option `json:"options"`
 }
+
+type Response struct {
+	Status  string `json:"status"`
+	Message any    `json:"message"`
+}

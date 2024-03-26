@@ -1,13 +1,19 @@
-package service
+package utils
 
 import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"webcrawler/utils"
+	"webcrawler/logger"
 )
 
-func Dump(jsonData utils.JSONFile, fileName string) {
+var log = logger.CreateLog()
+
+type Data struct {
+	data json.RawMessage
+}
+
+func Dump(jsonData JSONFile, fileName string) {
 	data, err := json.MarshalIndent(jsonData, "", "  ")
 	if err != nil {
 		log.Error("Error in Matshal data ", err)

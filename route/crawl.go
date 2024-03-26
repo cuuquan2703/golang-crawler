@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"os"
 	"webcrawler/repositories"
 	"webcrawler/service"
 	"webcrawler/utils"
@@ -20,6 +21,7 @@ var crawlService = service.Crawler{
 }
 
 func CrawlData(w http.ResponseWriter, r *http.Request) {
+	err := make(chan error)
 	fmt.Println("entry")
 	body, _ := io.ReadAll(r.Body)
 	var b utils.Body
@@ -27,5 +29,38 @@ func CrawlData(w http.ResponseWriter, r *http.Request) {
 	if er != nil {
 		fmt.Print("a")
 	}
-	crawlService.Visit(b.Url, b.Options)
+	go crawlService.Visit(b.Url, b.Options, err)
+	_err := <-err
+	if err != nil {
+		response := &utils.Response{Status: "fail", Message: _err.Error()}
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(response)
+		return
+	}
+	response := &utils.Response{Status: "success", Message: ""}
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(response)
+}
+
+func Download(w http.ResponseWriter, r *http.Request) {
+	fileName := r.PathValue("fileName")
+	// Open the JSON file
+	file, err := os.Open(fileName)
+	if err != nil {
+		response := &utils.Response{Status: "fail", Message: err.Error()}
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(response)
+		return
+	}
+	defer file.Close()
+	w.Header().Set("Content-Disposition", "attachment; filename="+fileName)
+	w.Header().Set("Content-Type", "application/json")
+
+	_, err = io.Copy(w, file)
+	if err != nil {
+		response := &utils.Response{Status: "fail", Message: err.Error()}
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(response)
+		return
+	}
 }
