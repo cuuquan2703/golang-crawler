@@ -7,6 +7,7 @@ import (
 	"slices"
 	"strconv"
 	"strings"
+	"time"
 	"webcrawler/logger"
 	"webcrawler/repositories"
 	"webcrawler/utils"
@@ -43,6 +44,7 @@ func (c Crawler) Visit(urls []string, options utils.Option) error {
 	}
 	c.C.Limit(&colly.LimitRule{
 		Parallelism: parralellism,
+		Delay:       10 * time.Second,
 	})
 	q, _ := queue.New(len(urls), &queue.InMemoryQueueStorage{MaxSize: 10000})
 	c.C.OnRequest(func(r *colly.Request) {
@@ -92,11 +94,25 @@ func (c Crawler) Visit(urls []string, options utils.Option) error {
 	})
 
 	c.C.OnHTML(".fck_detail", func(e *colly.HTMLElement) {
+		var tags []utils.TagHTML
 		e.ForEach("p.Normal:not(:has(script))", func(_ int, kl *colly.HTMLElement) {
+			t := kl.Text
+			i := 1
+			kl.ForEach("*", func(_ int, r *colly.HTMLElement) {
+				tags = append(tags, utils.TagHTML{Class: r.Name, Text: r.Text})
+			})
+			for _, v := range tags {
+				if slices.Contains(options.Tag, v.Class) || options.Tag[0] == "*" {
+					open := `<` + v.Class + `>`
+					close := `</` + v.Class + `>`
+					t = strings.Replace(t, v.Text, open+v.Text+close, i+1)
+					i++
+				}
+			}
 			if slices.Contains(options.Tag, kl.Name) || options.Tag[0] == "*" {
 				open := `<` + kl.Name + `>`
 				close := `</` + kl.Name + `>`
-				para = append(para, open+kl.Text+close)
+				para = append(para, open+t+close)
 			}
 		})
 		e.ForEach("a[href]", func(_ int, kl *colly.HTMLElement) {

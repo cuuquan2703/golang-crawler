@@ -5009,3 +5009,247 @@
 2024-03-27T14:33:51.179+0700	INFO	logger/logger.go:59	Insert successfully
 2024-03-27T14:33:51.179+0700	INFO	logger/logger.go:59	Done
 2024-03-27T14:33:51.180+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T14:57:42.075+0700	INFO	logger/logger.go:59	Visiting /vu-sap-cau-co-the-khien-my-thiet-hai-15-trieu-usd-moi-ngay-472705722.html
+2024-03-27T14:57:42.075+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-27T14:57:42.076+0700	INFO	logger/logger.go:59	Visiting /ong-lukashenko-nhung-ke-xa-sung-o-nga-dinh-tron-sang-belarus-4727012.html
+2024-03-27T14:57:42.077+0700	INFO	logger/logger.go:59	Visiting /tau-hang-dam-sap-cau-o-my-nhieu-xe-roi-xuong-song-4726802.html
+2024-03-27T14:57:42.077+0700	INFO	logger/logger.go:59	Visiting /4-nghi-pham-tan-cong-nha-hat-nga-trinh-dien-toa-an-4726109.html
+2024-03-27T14:57:43.497+0700	INFO	logger/logger.go:59	Saved file into cache/4727012.html
+2024-03-27T14:57:43.515+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T14:57:43.521+0700	INFO	logger/logger.go:59	Write successfully into 4727012.json
+2024-03-27T14:57:43.609+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T14:57:43.609+0700	INFO	logger/logger.go:59	Done
+2024-03-27T14:57:43.610+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T14:57:43.610+0700	INFO	logger/logger.go:59	Visiting /nga-cao-buoc-phuong-tay-ukraine-ho-tro-nghi-pham-xa-sung-o-moskva-4726967.html
+2024-03-27T14:57:43.779+0700	INFO	logger/logger.go:59	Saved file into cache/4726109.html
+2024-03-27T14:57:43.785+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T14:57:43.793+0700	INFO	logger/logger.go:59	Write successfully into 4726109.json
+2024-03-27T14:57:43.796+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T14:57:43.796+0700	INFO	logger/logger.go:59	Done
+2024-03-27T14:57:43.796+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T14:57:43.935+0700	INFO	logger/logger.go:59	Saved file into cache/4726802.html
+2024-03-27T14:57:43.939+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T14:57:43.941+0700	INFO	logger/logger.go:59	Write successfully into 4726802.json
+2024-03-27T14:57:43.943+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T14:57:43.943+0700	INFO	logger/logger.go:59	Done
+2024-03-27T14:57:43.943+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T14:57:43.990+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-27T14:57:43.992+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T14:57:43.996+0700	INFO	logger/logger.go:59	Write successfully into 4725412.json
+2024-03-27T14:57:43.998+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T14:57:43.998+0700	INFO	logger/logger.go:59	Done
+2024-03-27T14:57:43.999+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T14:57:43.999+0700	INFO	logger/logger.go:59	Visiting /ngan-hang-nha-nuoc-de-xuat-bo-doc-quyen-vang-mieng-4724716.html
+2024-03-27T14:57:44.325+0700	INFO	logger/logger.go:59	Saved file into cache/4726967.html
+2024-03-27T14:57:44.327+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T14:57:44.330+0700	INFO	logger/logger.go:59	Write successfully into 4726967.json
+2024-03-27T14:57:44.332+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T14:57:44.332+0700	INFO	logger/logger.go:59	Done
+2024-03-27T14:57:44.332+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T14:57:44.417+0700	ERROR	logger/logger.go:64	Error: 	{"error": "Not Found"}
+2024-03-27T14:57:44.581+0700	INFO	logger/logger.go:59	Saved file into cache/4724716.html
+2024-03-27T14:57:44.583+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T14:57:44.587+0700	INFO	logger/logger.go:59	Write successfully into 4724716.json
+2024-03-27T14:57:44.589+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T14:57:44.589+0700	INFO	logger/logger.go:59	Done
+2024-03-27T14:57:44.589+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:06:20.783+0700	INFO	logger/logger.go:59	Visiting /4-nghi-pham-tan-cong-nha-hat-nga-trinh-dien-toa-an-4726109.html
+2024-03-27T15:06:20.783+0700	INFO	logger/logger.go:59	Visiting /vu-sap-cau-co-the-khien-my-thiet-hai-15-trieu-usd-moi-ngay-472705722.html
+2024-03-27T15:06:20.783+0700	INFO	logger/logger.go:59	Visiting /tau-hang-dam-sap-cau-o-my-nhieu-xe-roi-xuong-song-4726802.html
+2024-03-27T15:06:20.783+0700	INFO	logger/logger.go:59	Visiting /gia-vang-mieng-ve-duoi-80-trieu-sau-de-xuat-bo-doc-quyen-vang-mieng-4725412.html
+2024-03-27T15:06:20.783+0700	INFO	logger/logger.go:59	Visiting /ong-lukashenko-nhung-ke-xa-sung-o-nga-dinh-tron-sang-belarus-4727012.html
+2024-03-27T15:06:21.349+0700	INFO	logger/logger.go:59	Saved file into cache/4725412.html
+2024-03-27T15:06:21.359+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:06:21.363+0700	INFO	logger/logger.go:59	Write successfully into 4725412.json
+2024-03-27T15:06:21.451+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:06:21.451+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:06:21.452+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:06:21.452+0700	INFO	logger/logger.go:59	Visiting /ngan-hang-nha-nuoc-de-xuat-bo-doc-quyen-vang-mieng-4724716.html
+2024-03-27T15:06:21.510+0700	INFO	logger/logger.go:59	Saved file into cache/4726109.html
+2024-03-27T15:06:21.513+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:06:21.517+0700	INFO	logger/logger.go:59	Write successfully into 4726109.json
+2024-03-27T15:06:21.562+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:06:21.562+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:06:21.563+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:06:21.926+0700	INFO	logger/logger.go:59	Saved file into cache/4727012.html
+2024-03-27T15:06:21.928+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:06:21.930+0700	INFO	logger/logger.go:59	Write successfully into 4727012.json
+2024-03-27T15:06:21.932+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:06:21.932+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:06:21.932+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:06:21.932+0700	INFO	logger/logger.go:59	Visiting /nga-cao-buoc-phuong-tay-ukraine-ho-tro-nghi-pham-xa-sung-o-moskva-4726967.html
+2024-03-27T15:06:22.309+0700	INFO	logger/logger.go:59	Saved file into cache/4726802.html
+2024-03-27T15:06:22.317+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:06:22.324+0700	INFO	logger/logger.go:59	Write successfully into 4726802.json
+2024-03-27T15:06:22.330+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:06:22.330+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:06:22.330+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:06:22.600+0700	INFO	logger/logger.go:59	Saved file into cache/4724716.html
+2024-03-27T15:06:22.608+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:06:22.614+0700	INFO	logger/logger.go:59	Write successfully into 4724716.json
+2024-03-27T15:06:22.620+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:06:22.620+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:06:22.620+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:06:22.853+0700	INFO	logger/logger.go:59	Saved file into cache/4726967.html
+2024-03-27T15:06:22.858+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:06:22.859+0700	INFO	logger/logger.go:59	Write successfully into 4726967.json
+2024-03-27T15:06:22.861+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:06:22.862+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:06:22.863+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:06:22.896+0700	ERROR	logger/logger.go:64	Error: 	{"error": "Not Found"}
+2024-03-27T15:33:30.740+0700	INFO	logger/logger.go:59	Visiting /vu-sap-cau-co-the-khien-my-thiet-hai-15-trieu-usd-moi-ngay-472705722.html
+2024-03-27T15:33:30.740+0700	INFO	logger/logger.go:59	Visiting /vff-cham-dut-hop-dong-voi-hlv-troussier-4725844.html
+2024-03-27T15:33:30.740+0700	INFO	logger/logger.go:59	Visiting /ong-lukashenko-nhung-ke-xa-sung-o-nga-dinh-tron-sang-belarus-4727012.html
+2024-03-27T15:33:30.740+0700	INFO	logger/logger.go:59	Visiting /4-nghi-pham-tan-cong-nha-hat-nga-trinh-dien-toa-an-4726109.html
+2024-03-27T15:33:30.741+0700	INFO	logger/logger.go:59	Visiting /tau-hang-dam-sap-cau-o-my-nhieu-xe-roi-xuong-song-4726802.html
+2024-03-27T15:33:31.210+0700	INFO	logger/logger.go:59	Saved file into cache/4726802.html
+2024-03-27T15:33:31.214+0700	INFO	logger/logger.go:59	Saved file into cache/4726109.html
+2024-03-27T15:33:31.220+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:33:31.224+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:33:31.226+0700	INFO	logger/logger.go:59	Write successfully into 4726802.json
+2024-03-27T15:33:31.231+0700	INFO	logger/logger.go:59	Write successfully into 4726109.json
+2024-03-27T15:33:31.248+0700	INFO	logger/logger.go:59	Saved file into cache/4727012.html
+2024-03-27T15:33:31.255+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:33:31.259+0700	INFO	logger/logger.go:59	Write successfully into 4727012.json
+2024-03-27T15:33:31.264+0700	INFO	logger/logger.go:59	Saved file into cache/4725844.html
+2024-03-27T15:33:31.276+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:33:31.285+0700	INFO	logger/logger.go:59	Write successfully into 4725844.json
+2024-03-27T15:33:31.338+0700	ERROR	logger/logger.go:64	Error: 	{"error": "Not Found"}
+2024-03-27T15:33:31.577+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:33:31.577+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:33:31.577+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:33:31.586+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:33:31.586+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:33:31.586+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:33:31.589+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:33:31.589+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:33:31.591+0700	INFO	logger/logger.go:59	Visiting /nga-cao-buoc-phuong-tay-ukraine-ho-tro-nghi-pham-xa-sung-o-moskva-4726967.html
+2024-03-27T15:33:31.591+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:33:31.606+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:33:31.606+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:33:31.606+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:33:31.606+0700	INFO	logger/logger.go:59	Visiting /hlv-troussier-ky-hop-dong-dan-dat-tuyen-viet-nam-4571404.html
+2024-03-27T15:33:32.509+0700	INFO	logger/logger.go:59	Saved file into cache/4571404.html
+2024-03-27T15:33:32.514+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:33:32.521+0700	INFO	logger/logger.go:59	Write successfully into 4571404.json
+2024-03-27T15:33:32.524+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:33:32.524+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:33:32.524+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:33:32.647+0700	INFO	logger/logger.go:59	Saved file into cache/4726967.html
+2024-03-27T15:33:32.651+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:33:32.653+0700	INFO	logger/logger.go:59	Write successfully into 4726967.json
+2024-03-27T15:33:32.655+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:33:32.655+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:33:32.655+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:35:18.778+0700	INFO	logger/logger.go:59	Visiting /4-nghi-pham-tan-cong-nha-hat-nga-trinh-dien-toa-an-4726109.html
+2024-03-27T15:35:18.778+0700	INFO	logger/logger.go:59	Visiting /ong-lukashenko-nhung-ke-xa-sung-o-nga-dinh-tron-sang-belarus-4727012.html
+2024-03-27T15:35:18.779+0700	INFO	logger/logger.go:59	Visiting /ong-lukashenko-nhung-ke-xa-sung-o-nga-dinh-tron-sang-belarus-4727012.html
+2024-03-27T15:35:18.779+0700	INFO	logger/logger.go:59	Visiting /vff-cham-dut-hop-dong-voi-hlv-troussier-4725844.html
+2024-03-27T15:35:18.779+0700	INFO	logger/logger.go:59	Visiting /tau-hang-dam-sap-cau-o-my-nhieu-xe-roi-xuong-song-4726802.html
+2024-03-27T15:35:18.779+0700	INFO	logger/logger.go:59	Visiting /tau-hang-dam-sap-cau-o-my-nhieu-xe-roi-xuong-song-4726802.html
+2024-03-27T15:35:18.779+0700	INFO	logger/logger.go:59	Visiting /4-nghi-pham-tan-cong-nha-hat-nga-trinh-dien-toa-an-4726109.html
+2024-03-27T15:35:18.780+0700	INFO	logger/logger.go:59	Visiting /vff-cham-dut-hop-dong-voi-hlv-troussier-4725844.html
+2024-03-27T15:35:19.144+0700	INFO	logger/logger.go:59	Saved file into cache/4725844.html
+2024-03-27T15:35:19.146+0700	INFO	logger/logger.go:59	Saved file into cache/4725844.html
+2024-03-27T15:35:19.165+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:35:19.180+0700	INFO	logger/logger.go:59	Write successfully into 4725844.json
+2024-03-27T15:35:19.192+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:35:19.192+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:35:19.195+0700	INFO	logger/logger.go:59	Visiting /hlv-troussier-ky-hop-dong-dan-dat-tuyen-viet-nam-4571404.html
+2024-03-27T15:35:19.195+0700	INFO	logger/logger.go:59	Visiting /hlv-troussier-ky-hop-dong-dan-dat-tuyen-viet-nam-4571404.html
+2024-03-27T15:35:19.197+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:35:19.202+0700	INFO	logger/logger.go:59	Write successfully into 4571404.json
+2024-03-27T15:35:19.209+0700	INFO	logger/logger.go:59	Saved file into cache/4727012.html
+2024-03-27T15:35:19.210+0700	INFO	logger/logger.go:59	Saved file into cache/4727012.html
+2024-03-27T15:35:19.216+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:35:19.220+0700	INFO	logger/logger.go:59	Write successfully into 4727012.json
+2024-03-27T15:35:19.285+0700	INFO	logger/logger.go:59	Saved file into cache/4726802.html
+2024-03-27T15:35:19.285+0700	INFO	logger/logger.go:59	Saved file into cache/4726802.html
+2024-03-27T15:35:19.285+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:35:19.286+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:35:19.286+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:35:19.286+0700	INFO	logger/logger.go:59	Visiting /hlv-troussier-ky-hop-dong-dan-dat-tuyen-viet-nam-4571404.html
+2024-03-27T15:35:19.287+0700	INFO	logger/logger.go:59	Visiting /hlv-troussier-ky-hop-dong-dan-dat-tuyen-viet-nam-4571404.html
+2024-03-27T15:35:19.287+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:35:19.290+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:35:19.292+0700	INFO	logger/logger.go:59	Write successfully into 4726802.json
+2024-03-27T15:35:19.293+0700	INFO	logger/logger.go:59	Saved file into cache/4726109.html
+2024-03-27T15:35:19.294+0700	INFO	logger/logger.go:59	Saved file into cache/4726109.html
+2024-03-27T15:35:19.301+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:35:19.302+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:35:19.302+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:35:19.302+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:35:19.302+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:35:19.303+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:35:19.303+0700	INFO	logger/logger.go:59	Write successfully into 4726109.json
+2024-03-27T15:35:19.303+0700	INFO	logger/logger.go:59	Visiting /nga-cao-buoc-phuong-tay-ukraine-ho-tro-nghi-pham-xa-sung-o-moskva-4726967.html
+2024-03-27T15:35:19.303+0700	INFO	logger/logger.go:59	Visiting /nga-cao-buoc-phuong-tay-ukraine-ho-tro-nghi-pham-xa-sung-o-moskva-4726967.html
+2024-03-27T15:35:19.305+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:35:19.306+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:35:19.306+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:35:19.307+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:35:19.308+0700	INFO	logger/logger.go:59	Write successfully into 4726967.json
+2024-03-27T15:35:19.309+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:35:19.309+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:35:19.310+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:35:19.310+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:35:19.310+0700	INFO	logger/logger.go:59	Write successfully into 4726109.json
+2024-03-27T15:35:19.311+0700	INFO	logger/logger.go:59	Visiting /nga-cao-buoc-phuong-tay-ukraine-ho-tro-nghi-pham-xa-sung-o-moskva-4726967.html
+2024-03-27T15:35:19.311+0700	INFO	logger/logger.go:59	Visiting /nga-cao-buoc-phuong-tay-ukraine-ho-tro-nghi-pham-xa-sung-o-moskva-4726967.html
+2024-03-27T15:35:19.312+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:35:19.312+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:35:19.312+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:35:19.312+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:35:19.315+0700	INFO	logger/logger.go:59	Write successfully into 4726802.json
+2024-03-27T15:35:19.317+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:35:19.317+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:35:19.317+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:35:19.318+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:35:19.352+0700	INFO	logger/logger.go:59	Saved file into cache/4571404.html
+2024-03-27T15:35:19.353+0700	INFO	logger/logger.go:59	Saved file into cache/4571404.html
+2024-03-27T15:35:19.356+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:35:19.358+0700	INFO	logger/logger.go:59	Write successfully into 4571404.json
+2024-03-27T15:35:19.361+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:35:19.362+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:35:19.362+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:35:19.363+0700	INFO	logger/logger.go:59	Write successfully into 4571404.json
+2024-03-27T15:35:19.365+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:35:19.365+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:35:19.365+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:35:19.365+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:35:20.359+0700	INFO	logger/logger.go:59	Saved file into cache/4726967.html
+2024-03-27T15:35:20.362+0700	INFO	logger/logger.go:59	Saved file into cache/4726967.html
+2024-03-27T15:35:20.362+0700	INFO	logger/logger.go:59	Saved file into cache/4726967.html
+2024-03-27T15:35:20.363+0700	INFO	logger/logger.go:59	Saved file into cache/4726967.html
+2024-03-27T15:35:20.368+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:35:20.370+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:35:20.372+0700	INFO	logger/logger.go:59	Write successfully into 4726967.json
+2024-03-27T15:35:20.375+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:35:20.376+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:35:20.376+0700	INFO	logger/logger.go:59	Write successfully into 4726967.json
+2024-03-27T15:35:20.378+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:35:20.378+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:35:20.378+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:35:20.379+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:35:20.394+0700	INFO	logger/logger.go:59	Write successfully into 4726967.json
+2024-03-27T15:35:20.394+0700	INFO	logger/logger.go:59	Write successfully into 4726967.json
+2024-03-27T15:35:20.396+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:35:20.396+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:35:20.396+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:35:20.397+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:35:20.397+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:35:20.397+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:35:20.397+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:35:20.397+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:35:20.900+0700	INFO	logger/logger.go:59	Saved file into cache/4571404.html
+2024-03-27T15:35:20.901+0700	INFO	logger/logger.go:59	Saved file into cache/4571404.html
+2024-03-27T15:35:20.909+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:35:20.915+0700	INFO	logger/logger.go:59	Write successfully into 4571404.json
+2024-03-27T15:35:20.922+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:35:20.922+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:35:20.924+0700	INFO	logger/logger.go:59	Processing statictis text
+2024-03-27T15:35:20.925+0700	INFO	logger/logger.go:59	Write successfully into 4571404.json
+2024-03-27T15:35:20.928+0700	INFO	logger/logger.go:59	Insert successfully
+2024-03-27T15:35:20.928+0700	INFO	logger/logger.go:59	Done
+2024-03-27T15:35:20.928+0700	INFO	logger/logger.go:59	Finished 
+2024-03-27T15:35:20.928+0700	INFO	logger/logger.go:59	Finished 

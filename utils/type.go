@@ -22,3 +22,8 @@ type Response struct {
 	Status  string `json:"status"`
 	Message any    `json:"message"`
 }
+
+type TagHTML struct {
+	Class string `json:"class"`
+	Text  string `json:"text"`
+}
