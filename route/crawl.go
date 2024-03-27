@@ -19,20 +19,39 @@ var crawlService = service.Crawler{
 	C:    a,
 	Repo: Repo,
 }
+var limit = 5
 
 func CrawlData(w http.ResponseWriter, r *http.Request) {
-	err := make(chan error)
 	fmt.Println("entry")
 	body, _ := io.ReadAll(r.Body)
 	var b utils.Body
-	er := json.Unmarshal([]byte(string(body)), &b)
-	if er != nil {
-		fmt.Print("a")
+	erJson := json.Unmarshal([]byte(string(body)), &b)
+
+	errValid := service.CheckValidURL(b.Url)
+	if errValid != nil {
+		response := &utils.Response{Status: "fail", Message: errValid.Error()}
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(response)
+		return
 	}
-	go crawlService.Visit(b.Url, b.Options, err)
-	_err := <-err
-	if _err != nil {
-		response := &utils.Response{Status: "fail", Message: _err.Error()}
+	if erJson != nil {
+		response := &utils.Response{Status: "fail", Message: erJson.Error()}
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(response)
+		return
+	}
+
+	if len(b.Url) > limit {
+		response := &utils.Response{Status: "fail", Message: "Exceed limit allowed link"}
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(response)
+		return
+	}
+
+	errCrawl := crawlService.Visit(b.Url, b.Options)
+
+	if errCrawl != nil {
+		response := &utils.Response{Status: "fail", Message: errCrawl.Error()}
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode(response)
 		return

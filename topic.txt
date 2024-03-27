@@ -29,3 +29,15 @@ Yêu cầu chi tiết:
 - Front end react, UI đơn giản và hợp lí (Optional)
   + Form gửi link crawl
   + Trang xem data của từng link (nếu crawl link đó bị lỗi thì lưu lỗi vào để khi xem biết nó bị gì)
+
+____________________________________________________________________
+[x] Verify link
+[x] Handle Link not exist
+[x] Parallelism link
+[x] Muliple highlight word
+[] Runnign background
+[] Limit request
+[] Multiple tag html
+-------------
+[] Handle error
+[] Unit test

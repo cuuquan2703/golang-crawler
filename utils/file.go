@@ -22,7 +22,7 @@ func Dump(jsonData JSONFile, fileName string) {
 		log.Error("Error in Matshal data ", err)
 		return
 	}
-	err = os.WriteFile(fileName, data, 0644)
+	err = os.WriteFile(`json/`+fileName, data, 0644)
 	if err != nil {
 		fmt.Println("Error writing JSON to file:", err)
 		log.Error("Error writting JSON file ", err)

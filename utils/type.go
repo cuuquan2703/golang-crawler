@@ -8,14 +8,14 @@ type JSONFile struct {
 }
 
 type Option struct {
-	MaxDepth int    `json:"maxDepth"`
-	Tag      string `json:"tag"`
-	BoldText string `json:"boldText"`
+	MaxDepth int      `json:"maxDepth"`
+	Tag      []string `json:"tag"`
+	BoldText []string `json:"boldText"`
 }
 
 type Body struct {
-	Url     string `json:"url"`
-	Options Option `json:"options"`
+	Url     []string `json:"url"`
+	Options Option   `json:"options"`
 }
 
 type Response struct {

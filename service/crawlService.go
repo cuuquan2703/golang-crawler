@@ -1,8 +1,10 @@
 package service
 
 import (
+	"errors"
 	"fmt"
 	"regexp"
+	"slices"
 	"strconv"
 	"strings"
 	"webcrawler/logger"
@@ -10,6 +12,7 @@ import (
 	"webcrawler/utils"
 
 	"github.com/gocolly/colly"
+	"github.com/gocolly/colly/queue"
 )
 
 type Crawler struct {
@@ -19,21 +22,35 @@ type Crawler struct {
 
 var log = logger.CreateLog()
 
-func (c Crawler) Visit(url string, options utils.Option, err chan error) {
-	var er error
+func (c Crawler) Visit(urls []string, options utils.Option) error {
+
+	var err error
 	var para []string
 	var img []string
 	var relatedUrl []string
 	var title string
+	var parralellism int
 	var pattern = `https:\/\/vnexpress\.net\/[^\/]+\.html`
 	var re = regexp.MustCompile(pattern)
 	c.C.MaxDepth = options.MaxDepth
-	c.C.Async = true
 	c.C.IgnoreRobotsTxt = true
+	c.C.AllowURLRevisit = true
+	c.C.Async = true
+	if len(urls) > 5 {
+		parralellism = 5
+	} else {
+		parralellism = len(urls)
+	}
+	c.C.Limit(&colly.LimitRule{
+		Parallelism: parralellism,
+	})
+	q, _ := queue.New(len(urls), &queue.InMemoryQueueStorage{MaxSize: 10000})
 	c.C.OnRequest(func(r *colly.Request) {
+
 		para = make([]string, 0)
 		img = make([]string, 0)
 		relatedUrl = make([]string, 0)
+		title = ""
 		path := strings.Split(r.URL.Path, "-")
 		html := path[len(path)-1]
 		r.Ctx.Put("url", r.URL.Path)
@@ -41,8 +58,8 @@ func (c Crawler) Visit(url string, options utils.Option, err chan error) {
 		log.Info("Visiting " + r.URL.Path)
 	})
 
-	c.C.OnError(func(_ *colly.Response, _err error) {
-		er = _err
+	c.C.OnError(func(e *colly.Response, _err error) {
+		err = errors.New(e.Ctx.Get("url") + " " + _err.Error())
 		log.Error("Error: ", _err)
 	})
 
@@ -50,7 +67,6 @@ func (c Crawler) Visit(url string, options utils.Option, err chan error) {
 		filePath := "cache/" + r.Ctx.Get("fileHTML")
 		err := r.Save(filePath)
 		if err != nil {
-			er = err
 			log.Error("Error during saing file ", err)
 		} else {
 			log.Info("Saved file into " + filePath)
@@ -59,7 +75,7 @@ func (c Crawler) Visit(url string, options utils.Option, err chan error) {
 
 	c.C.OnHTML(".title-detail", func(e *colly.HTMLElement) {
 		fmt.Println(e.Name)
-		if e.Name == options.Tag {
+		if slices.Contains(options.Tag, e.Name) || options.Tag[0] == "*" {
 			open := `<` + e.Name + `>`
 			close := `</` + e.Name + `>`
 			title = open + e.Text + close
@@ -67,12 +83,21 @@ func (c Crawler) Visit(url string, options utils.Option, err chan error) {
 	})
 
 	c.C.OnHTML("p.description", func(e *colly.HTMLElement) {
-		para = append(para, e.Text)
+		fmt.Println("Element: ", e)
+		if slices.Contains(options.Tag, e.Name) || options.Tag[0] == "*" {
+			open := `<` + e.Name + `>`
+			close := `</` + e.Name + `>`
+			para = append(para, open+e.Text+close)
+		}
 	})
 
 	c.C.OnHTML(".fck_detail", func(e *colly.HTMLElement) {
 		e.ForEach("p.Normal:not(:has(script))", func(_ int, kl *colly.HTMLElement) {
-			para = append(para, kl.Text)
+			if slices.Contains(options.Tag, kl.Name) || options.Tag[0] == "*" {
+				open := `<` + kl.Name + `>`
+				close := `</` + kl.Name + `>`
+				para = append(para, open+kl.Text+close)
+			}
 		})
 		e.ForEach("a[href]", func(_ int, kl *colly.HTMLElement) {
 			if re.MatchString(kl.Attr("href")) {
@@ -82,7 +107,6 @@ func (c Crawler) Visit(url string, options utils.Option, err chan error) {
 		e.ForEach("img[src]", func(_ int, kl *colly.HTMLElement) {
 			img = append(img, kl.Attr("src"))
 		})
-		fmt.Print(para)
 		log.Info("Processing statictis text")
 		paras, lineCount, wourdCount, charCount, freq, avgCount := utils.Concurrency(para, options.BoldText)
 		//paras, _, _, _, _, _ := Concurrency(para, options.BoldText)
@@ -95,8 +119,7 @@ func (c Crawler) Visit(url string, options utils.Option, err chan error) {
 		}
 
 		utils.Dump(json, strings.Split(e.Response.Ctx.Get("fileHTML"), ".")[0]+".json")
-		id, err := strconv.Atoi(strings.Split(e.Response.Ctx.Get("fileHTML"), ".")[0])
-		er = err
+		id, _ := strconv.Atoi(strings.Split(e.Response.Ctx.Get("fileHTML"), ".")[0])
 		var data = repositories.Para{
 			Id:        id,
 			Url:       e.Response.Ctx.Get("url"),
@@ -114,16 +137,29 @@ func (c Crawler) Visit(url string, options utils.Option, err chan error) {
 	})
 
 	c.C.OnHTML(".sidebar-1 a[href]", func(e *colly.HTMLElement) {
-		if re.MatchString(e.Attr("href")) {
+		if re.MatchString(e.Attr("href")) && !CheckCacheURL(e.Attr("href")) {
 			e.Request.Visit(e.Attr("href"))
 		}
 	})
 
 	c.C.OnScraped((func(r *colly.Response) {
+		para = make([]string, 0)
+		img = make([]string, 0)
+		relatedUrl = make([]string, 0)
+		title = ""
 		log.Info("Finished ")
 	}))
 
-	c.C.Visit(url)
+	for _, url := range urls {
+		if err := q.AddURL(url); err != nil {
+			log.Error("Error adding queue ", err)
+		}
+	}
+	er := q.Run(c.C)
 	c.C.Wait()
-	err <- er
+	if er != nil {
+		err = er
+		log.Error("Failed to run: ", err)
+	}
+	return err
 }

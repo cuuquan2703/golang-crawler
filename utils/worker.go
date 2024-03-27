@@ -2,6 +2,7 @@ package utils
 
 import (
 	"regexp"
+	"slices"
 	"strings"
 
 	"github.com/texttheater/golang-levenshtein/levenshtein"
@@ -37,20 +38,29 @@ func Freq(content string, freq chan map[string]int, totalLen chan int) {
 	totalLen <- length
 }
 
-func BoldText(content string, req string, boldText chan string) {
+func BoldText(content []string, reqs []string) []string {
 	clone := content
 	threshold := 2
-	a := ""
-	w := strings.Fields(clone)
-	for _, word := range w {
-		if (levenshtein.DistanceForStrings([]rune(word), []rune(req), levenshtein.DefaultOptions)) <= threshold {
-			a = strings.Replace(clone, word, "<b>"+word+"</b>", -1)
+
+	var newContent = make([]string, 0)
+	var checked = make([]string, 0)
+	for _, el := range clone {
+		w := strings.Fields(el)
+		for _, word := range w {
+			for _, req := range reqs {
+				if ((levenshtein.DistanceForStrings([]rune(word), []rune(req), levenshtein.DefaultOptions)) <= threshold) && (!slices.Contains(checked, word)) {
+					el = strings.Replace(el, word, "<b>"+word+"</b>", -1)
+					checked = append(checked, word)
+				}
+			}
 		}
+		newContent = append(newContent, el)
 	}
-	boldText <- a
+	return newContent
+
 }
 
-func Worker(jobs chan string, boldText string, newContent chan string, lineCount chan int, wordCount chan int, charCount chan int, freq chan map[string]int, totalLen chan int) {
+func Worker(jobs chan string, lineCount chan int, wordCount chan int, charCount chan int, freq chan map[string]int, totalLen chan int) {
 	//jobs -> para 10k
 	//
 	for j := range jobs {
@@ -58,6 +68,5 @@ func Worker(jobs chan string, boldText string, newContent chan string, lineCount
 		go WordCount(j, wordCount)
 		go CharCount(j, charCount)
 		go Freq(j, freq, totalLen)
-		go BoldText(j, boldText, newContent)
 	}
 }
