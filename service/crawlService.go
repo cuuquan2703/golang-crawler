@@ -77,20 +77,24 @@ func (c Crawler) Visit(urls []string, options utils.Option) error {
 
 	c.C.OnHTML(".title-detail", func(e *colly.HTMLElement) {
 		fmt.Println(e.Name)
+		open := ""
+		close := ""
 		if slices.Contains(options.Tag, e.Name) || options.Tag[0] == "*" {
-			open := `<` + e.Name + `>`
-			close := `</` + e.Name + `>`
-			title = open + e.Text + close
+			open = `<` + e.Name + `>`
+			close = `</` + e.Name + `>`
 		}
+		title = open + e.Text + close
 	})
 
 	c.C.OnHTML("p.description", func(e *colly.HTMLElement) {
 		fmt.Println("Element: ", e)
+		open := ""
+		close := ""
 		if slices.Contains(options.Tag, e.Name) || options.Tag[0] == "*" {
-			open := `<` + e.Name + `>`
-			close := `</` + e.Name + `>`
-			para = append(para, open+e.Text+close)
+			open = `<` + e.Name + `>`
+			close = `</` + e.Name + `>`
 		}
+		para = append(para, open+e.Text+close)
 	})
 
 	c.C.OnHTML(".fck_detail", func(e *colly.HTMLElement) {
@@ -98,22 +102,24 @@ func (c Crawler) Visit(urls []string, options utils.Option) error {
 		e.ForEach("p.Normal:not(:has(script))", func(_ int, kl *colly.HTMLElement) {
 			t := kl.Text
 			i := 1
+			open := ""
+			close := ""
 			kl.ForEach("*", func(_ int, r *colly.HTMLElement) {
 				tags = append(tags, utils.TagHTML{Class: r.Name, Text: r.Text})
 			})
 			for _, v := range tags {
 				if slices.Contains(options.Tag, v.Class) || options.Tag[0] == "*" {
-					open := `<` + v.Class + `>`
-					close := `</` + v.Class + `>`
+					open = `<` + v.Class + `>`
+					close = `</` + v.Class + `>`
 					t = strings.Replace(t, v.Text, open+v.Text+close, i+1)
 					i++
 				}
 			}
 			if slices.Contains(options.Tag, kl.Name) || options.Tag[0] == "*" {
-				open := `<` + kl.Name + `>`
-				close := `</` + kl.Name + `>`
-				para = append(para, open+t+close)
+				open = `<` + kl.Name + `>`
+				close = `</` + kl.Name + `>`
 			}
+			para = append(para, open+t+close)
 		})
 		e.ForEach("a[href]", func(_ int, kl *colly.HTMLElement) {
 			if re.MatchString(kl.Attr("href")) {

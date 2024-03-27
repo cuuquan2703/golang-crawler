@@ -37,7 +37,7 @@ ____________________________________________________________________
 [x] Muliple highlight word
 [] Runnign background
 [] Limit request
-[] Multiple tag html
+[x] Multiple tag html
 -------------
 [] Handle error
 [] Unit test
