@@ -38,10 +38,12 @@ func Freq(content string, freq chan map[string]int, totalLen chan int) {
 	totalLen <- length
 }
 
-func BoldText(content []string, reqs []string) []string {
+func BoldText(content []string, reqs []string, tag string) []string {
 	clone := content
 	threshold := 2
-
+	open := tag
+	a := strings.Split(tag, " ")[0] + ">"
+	close := strings.Replace(a, "<", "</", 1)
 	var newContent = make([]string, 0)
 	var checked = make([]string, 0)
 	for _, el := range clone {
@@ -49,7 +51,7 @@ func BoldText(content []string, reqs []string) []string {
 		for _, word := range w {
 			for _, req := range reqs {
 				if ((levenshtein.DistanceForStrings([]rune(word), []rune(req), levenshtein.DefaultOptions)) <= threshold) && (!slices.Contains(checked, word)) {
-					el = strings.Replace(el, word, "<b>"+word+"</b>", -1)
+					el = strings.Replace(el, word, open+word+close, -1)
 					checked = append(checked, word)
 				}
 			}

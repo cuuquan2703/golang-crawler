@@ -2,7 +2,7 @@ package utils
 
 import "fmt"
 
-func Concurrency(list []string, boldText []string) ([]string, int, int, int, map[string]int, float64) {
+func Concurrency(list []string, boldText []string, tag string) ([]string, int, int, int, map[string]int, float64) {
 	numWorker := 5
 	numJobs := len(list)
 	jobs := make(chan string)
@@ -39,6 +39,6 @@ func Concurrency(list []string, boldText []string) ([]string, int, int, int, map
 	}
 	avgCount := float64(ttl) / float64(wc)
 	fmt.Print(lc, wc, cc, avgCount, freq)
-	nc := BoldText(list, boldText)
+	nc := BoldText(list, boldText, tag)
 	return nc, lc, wc, cc, fr, avgCount
 }

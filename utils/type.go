@@ -11,6 +11,7 @@ type Option struct {
 	MaxDepth int      `json:"maxDepth"`
 	Tag      []string `json:"tag"`
 	BoldText []string `json:"boldText"`
+	BoldTag  string   `json:"boldTag"`
 }
 
 type Body struct {

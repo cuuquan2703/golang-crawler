@@ -57,7 +57,12 @@ func CrawlData(w http.ResponseWriter, r *http.Request) {
 	body, _ := io.ReadAll(r.Body)
 	var b utils.Body
 	erJson := json.Unmarshal([]byte(string(body)), &b)
-
+	if erJson != nil {
+		response := &utils.Response{Status: "fail", Message: erJson.Error()}
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(response)
+		return
+	}
 	errValid := service.CheckValidURL(b.Url)
 	if errValid != nil {
 		response := &utils.Response{Status: "fail", Message: errValid.Error()}
@@ -65,8 +70,10 @@ func CrawlData(w http.ResponseWriter, r *http.Request) {
 		json.NewEncoder(w).Encode(response)
 		return
 	}
-	if erJson != nil {
-		response := &utils.Response{Status: "fail", Message: erJson.Error()}
+	matched, _ := service.CheckValidTag(b.Options.BoldTag)
+	fmt.Print(b.Options.BoldTag, matched)
+	if !matched {
+		response := &utils.Response{Status: "fail", Message: "Tag not valid"}
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode(response)
 		return

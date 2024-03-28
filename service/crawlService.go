@@ -22,21 +22,22 @@ type Crawler struct {
 }
 
 var log = logger.CreateLog()
+var para []string
+var img []string
+var relatedUrl []string
+var title string
 
 func (c Crawler) Visit(urls []string, options utils.Option) error {
 
 	var err error
-	var para []string
-	var img []string
-	var relatedUrl []string
-	var title string
+
 	var parralellism int
 	var pattern = `https:\/\/vnexpress\.net\/[^\/]+\.html`
 	var re = regexp.MustCompile(pattern)
 	c.C.MaxDepth = options.MaxDepth
 	c.C.IgnoreRobotsTxt = true
 	// c.C.AllowURLRevisit = true
-	// c.C.Async = true
+	c.C.Async = true
 	if len(urls) > 5 {
 		parralellism = 5
 	} else {
@@ -44,11 +45,10 @@ func (c Crawler) Visit(urls []string, options utils.Option) error {
 	}
 	c.C.Limit(&colly.LimitRule{
 		Parallelism: parralellism,
-		Delay:       10 * time.Second,
+		RandomDelay: 1 * time.Second,
 	})
 	q, _ := queue.New(len(urls), &queue.InMemoryQueueStorage{MaxSize: 10000})
 	c.C.OnRequest(func(r *colly.Request) {
-
 		para = make([]string, 0)
 		img = make([]string, 0)
 		relatedUrl = make([]string, 0)
@@ -57,6 +57,12 @@ func (c Crawler) Visit(urls []string, options utils.Option) error {
 		html := path[len(path)-1]
 		r.Ctx.Put("url", r.URL.Path)
 		r.Ctx.Put("fileHTML", html)
+
+		r.Ctx.Put("para", para)
+		r.Ctx.Put("img", img)
+		r.Ctx.Put("related", relatedUrl)
+		r.Ctx.Put("title", title)
+
 		log.Info("Visiting " + r.URL.Path)
 	})
 
@@ -83,7 +89,9 @@ func (c Crawler) Visit(urls []string, options utils.Option) error {
 			open = `<` + e.Name + `>`
 			close = `</` + e.Name + `>`
 		}
+		title = e.Request.Ctx.Get("title")
 		title = open + e.Text + close
+		e.Request.Ctx.Put("title", title)
 	})
 
 	c.C.OnHTML("p.description", func(e *colly.HTMLElement) {
@@ -94,7 +102,9 @@ func (c Crawler) Visit(urls []string, options utils.Option) error {
 			open = `<` + e.Name + `>`
 			close = `</` + e.Name + `>`
 		}
+		para = e.Request.Ctx.GetAny("para").([]string)
 		para = append(para, open+e.Text+close)
+		e.Request.Ctx.Put("para", para)
 	})
 
 	c.C.OnHTML(".fck_detail", func(e *colly.HTMLElement) {
@@ -121,18 +131,28 @@ func (c Crawler) Visit(urls []string, options utils.Option) error {
 				openP = `<` + kl.Name + `>`
 				closeP = `</` + kl.Name + `>`
 			}
+			para = e.Request.Ctx.GetAny("para").([]string)
 			para = append(para, openP+t+closeP)
+			e.Request.Ctx.Put("para", para)
 		})
 		e.ForEach("a[href]", func(_ int, kl *colly.HTMLElement) {
 			if re.MatchString(kl.Attr("href")) {
+				relatedUrl = e.Request.Ctx.GetAny("related").([]string)
 				relatedUrl = append(relatedUrl, kl.Attr("href"))
+				e.Request.Ctx.Put("related", relatedUrl)
 			}
 		})
 		e.ForEach("img[src]", func(_ int, kl *colly.HTMLElement) {
-			img = append(img, kl.Attr("src"))
+			matched, _ := CheckValidImgURL(kl.Attr("src"))
+			if matched {
+				img = e.Request.Ctx.GetAny("img").([]string)
+				img = append(img, kl.Attr("src"))
+				e.Request.Ctx.Put("img", relatedUrl)
+			}
 		})
 		log.Info("Processing statictis text")
-		paras, lineCount, wourdCount, charCount, freq, avgCount := utils.Concurrency(para, options.BoldText)
+		fmt.Println(para)
+		paras, lineCount, wourdCount, charCount, freq, avgCount := utils.Concurrency(para, options.BoldText, options.BoldTag)
 		//paras, _, _, _, _, _ := Concurrency(para, options.BoldText)
 
 		var json = utils.JSONFile{
