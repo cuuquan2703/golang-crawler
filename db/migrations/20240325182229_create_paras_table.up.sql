@@ -5,6 +5,6 @@ create table if not exists Paragraphs (
     linecount int,
     wordcount int,
     charcount int,
-    avglength int,
+    avglength float,
     wordfreq varchar(100000)
 )

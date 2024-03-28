@@ -39,10 +39,10 @@ ____________________________________________________________________
 [x] Running background --> Pub-Sub
 [] Limit request
 [] Related url
-[] API
+[x] API
 [] Verify url image, valid request body
 -------------
-[] Handle error
+[x] Handle error
 [] Unit test
 
 ---Optional--------------

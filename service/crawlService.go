@@ -35,8 +35,8 @@ func (c Crawler) Visit(urls []string, options utils.Option) error {
 	var re = regexp.MustCompile(pattern)
 	c.C.MaxDepth = options.MaxDepth
 	c.C.IgnoreRobotsTxt = true
-	c.C.AllowURLRevisit = true
-	c.C.Async = true
+	// c.C.AllowURLRevisit = true
+	// c.C.Async = true
 	if len(urls) > 5 {
 		parralellism = 5
 	} else {
@@ -180,7 +180,6 @@ func (c Crawler) Visit(urls []string, options utils.Option) error {
 		}
 	}
 	er := q.Run(c.C)
-	c.C.Wait()
 	if er != nil {
 		err = er
 		log.Error("Failed to run: ", err)

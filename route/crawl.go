@@ -6,6 +6,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"strconv"
 	"webcrawler/repositories"
 	"webcrawler/service"
 	"webcrawler/utils"
@@ -20,6 +21,36 @@ var crawlService = service.Crawler{
 	Repo: Repo,
 }
 var limit = 5
+
+func GetAllStatistic(w http.ResponseWriter, r *http.Request) {
+	data, err := crawlService.GetAll()
+	if err != nil {
+		response := &utils.Response{Status: "fail", Message: "cannot get all statistic informations"}
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(response)
+		return
+	}
+
+	response := &utils.Response{Status: "success", Message: data}
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(response)
+}
+
+func GetStatisticByID(w http.ResponseWriter, r *http.Request) {
+	_id := r.PathValue("id")
+	id, _ := strconv.Atoi(_id)
+	data, err := crawlService.GetByID(id)
+	if err != nil {
+		response := &utils.Response{Status: "fail", Message: "cannot get all statistic informations"}
+		w.Header().Set("Content-Type", "application/json")
+		json.NewEncoder(w).Encode(response)
+		return
+	}
+
+	response := &utils.Response{Status: "success", Message: data}
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(response)
+}
 
 func CrawlData(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("entry")
@@ -56,7 +87,7 @@ func CrawlData(w http.ResponseWriter, r *http.Request) {
 		json.NewEncoder(w).Encode(response)
 		return
 	}
-	response := &utils.Response{Status: "success", Message: ""}
+	response := &utils.Response{Status: "success", Message: "Crawling"}
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(response)
 }
