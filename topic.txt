@@ -35,9 +35,15 @@ ____________________________________________________________________
 [x] Handle Link not exist
 [x] Parallelism link
 [x] Muliple highlight word
-[] Runnign background
-[] Limit request
 [x] Multiple tag html
+[x] Running background --> Pub-Sub
+[] Limit request
+[] Related url
+[] API
+[] Verify url image, valid request body
 -------------
 [] Handle error
 [] Unit test
+
+---Optional--------------
+[] React

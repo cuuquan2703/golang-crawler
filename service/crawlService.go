@@ -104,6 +104,8 @@ func (c Crawler) Visit(urls []string, options utils.Option) error {
 			i := 1
 			open := ""
 			close := ""
+			openP := ""
+			closeP := ""
 			kl.ForEach("*", func(_ int, r *colly.HTMLElement) {
 				tags = append(tags, utils.TagHTML{Class: r.Name, Text: r.Text})
 			})
@@ -116,10 +118,10 @@ func (c Crawler) Visit(urls []string, options utils.Option) error {
 				}
 			}
 			if slices.Contains(options.Tag, kl.Name) || options.Tag[0] == "*" {
-				open = `<` + kl.Name + `>`
-				close = `</` + kl.Name + `>`
+				openP = `<` + kl.Name + `>`
+				closeP = `</` + kl.Name + `>`
 			}
-			para = append(para, open+t+close)
+			para = append(para, openP+t+closeP)
 		})
 		e.ForEach("a[href]", func(_ int, kl *colly.HTMLElement) {
 			if re.MatchString(kl.Attr("href")) {
