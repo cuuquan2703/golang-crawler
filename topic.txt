@@ -37,10 +37,10 @@ ____________________________________________________________________
 [x] Muliple highlight word
 [x] Multiple tag html
 [x] Running background --> Pub-Sub
-[] Limit request
+[x] Limit request
 [] Related url
 [x] API
-[] Verify url image, valid request body
+[x] Verify url image, valid request body
 -------------
 [x] Handle error
 [] Unit test

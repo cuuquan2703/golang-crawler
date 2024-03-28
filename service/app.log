@@ -1,0 +1,8 @@
+2024-03-29T05:59:51.451+0700	INFO	logger/logger.go:59	Querying SELECT * from paragraphs
+2024-03-29T05:59:51.481+0700	INFO	logger/logger.go:59	Query successfully
+2024-03-29T06:00:37.363+0700	INFO	logger/logger.go:59	Querying SELECT * from paragraphs
+2024-03-29T06:00:37.475+0700	INFO	logger/logger.go:59	Query successfully
+2024-03-29T06:01:16.249+0700	INFO	logger/logger.go:59	Querying SELECT * from paragraphs
+2024-03-29T06:01:16.249+0700	INFO	logger/logger.go:59	Query successfully
+2024-03-29T06:02:09.017+0700	INFO	logger/logger.go:59	Querying SELECT * from paragraphs WHERE id=$1
+2024-03-29T06:02:09.017+0700	INFO	logger/logger.go:59	Query successfully
